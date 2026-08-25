@@ -1,0 +1,12 @@
+text
+historico_manutencao 
+{
+  "_id": 0001,
+  "equipment_id": 0001,
+  "service_order_id": 0001,
+  "maintenance_date": {"$date": "2026-08-25T18:00:00Z"},
+  "maintenance_type": "placeholder",
+  "description": "placeholder",
+  "technician_id": 0001,
+  "observations": "placeholder
+},
