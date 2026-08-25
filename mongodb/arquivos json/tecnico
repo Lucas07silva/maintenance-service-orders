@@ -1,0 +1,12 @@
+  "tecnico": {
+    "_id": "TEC001",
+    "name": "João Silva",
+    "registration": "TEC-001",
+    "phone": "(75) 99999-9999",
+    "email": "joao@industriabahia.com",
+    "specialties": [
+      "Mecânica",
+      "Manutenção Industrial"
+    ],
+    "status": "ativo"
+  },
