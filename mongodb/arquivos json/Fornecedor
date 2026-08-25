@@ -1,0 +1,15 @@
+"fornecedor": {
+  "_id": "FOR001",
+  "name": "GoiabaBoys",
+  "cnpj": "48.291.356/0001-02",
+  "phone": "(75) 94002-8922",
+  "email":"contato@goiabasboys.com.br",
+  "address": [
+    "logradouro": "Avenida Maria Quitéria, 1200 - Sala 102",
+    "bairro": "Centro",
+    "cidade": "Feira de Santana",
+    "estado": "BA",
+    "cep": "44002-236"
+  ]
+
+}
