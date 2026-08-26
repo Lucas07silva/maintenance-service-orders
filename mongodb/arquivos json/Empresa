@@ -1,0 +1,15 @@
+"Empresa": {
+  "_id": "EMPRES001",
+  "name": "XCAIXAMILGRAU",
+  "cnpj": "74.221.099/0001-98",
+  "phone": "(75) 99136-0492",
+  "email":"XCAIXA@MILGRAU.com.br",
+  "address": [
+    "logradouro": "placeholder",
+    "bairro": "placeholder",
+    "cidade": "Feira de Santana",
+    "estado": "BA",
+    "cep": "44002-236"
+  ]
+
+}
