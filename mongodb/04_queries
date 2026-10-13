@@ -1,0 +1,51 @@
+db = db.getSiblingDB("industrial_maintenance");
+
+print("\n1. Consulta simples: equipamentos operacionais");
+db.equipamento.find({ status: "Operacional" });
+
+print("\n2. Consulta simples: técnicos ativos");
+db.tecnico.find({ status: "Ativo" });
+
+print("\n3. Consulta simples: ordens de serviço de alta prioridade");
+db.ordem_servico.find({ priority: "Alta" });
+
+print("\n4. Condições múltiplas: ordens abertas com prioridade alta");
+db.ordem_servico.find({
+  status: { $in: ["Aberta", "Em andamento"] },
+  priority: "Alta"
+});
+
+print("\n5. Condições múltiplas: peças abaixo do estoque mínimo");
+db.peca.find({
+  $expr: { $lt: ["$stockQuantity", "$minimumStock"] },
+  unit: "unidade"
+});
+
+print("\n6. Projeção 1: nome e código patrimonial dos equipamentos");
+db.equipamento.find({}, { _id: 0, name: 1, assetCode: 1 });
+
+print("\n7. Projeção 2: código, prioridade e status das ordens");
+db.ordem_servico.find(
+  {},
+  { _id: 0, code: 1, priority: 1, status: 1 }
+);
+
+print("\n8. Projeção 3: nome e especialidades dos técnicos");
+db.tecnico.find({}, { _id: 0, name: 1, specialties: 1 });
+
+print("\n9. Consulta em documento incorporado: falhas de categoria elétrica");
+db.ordem_servico.find({ "failure.category": "Elétrica" });
+
+print("\n10. Consulta em array: atividades ainda não concluídas");
+db.ordem_servico.find({ "activities.completed": false });
+
+print("\n11. Ordenação: ordens mais recentes primeiro");
+db.ordem_servico.find().sort({ openingDate: -1 });
+
+print("\n12. Consulta por referência: ordens de um equipamento específico");
+const equipamento = db.equipamento.findOne({ assetCode: "EQP001" });
+if (equipamento) {
+  db.ordem_servico.find({ equipmentId: equipamento._id });
+} else {
+  print("Equipamento EQP001 não encontrado.");
+}
