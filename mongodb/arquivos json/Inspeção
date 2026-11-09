@@ -1,0 +1,9 @@
+"Inspecao": {
+  "_id": "INSPEC001",
+  "equipmentId": "EQP-001",
+  "technicianId": "TEC001",
+  "inspectionDate": {"$date": "2026-08-25T18:00:00Z",}
+  "status": "ativo",
+  "findings": "Nenhuma irregularidade encontrada durante a vistoria inicial.",
+  "observations": "Equipamento pronto para operação."
+}

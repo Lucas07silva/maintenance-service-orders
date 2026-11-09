@@ -1,0 +1,11 @@
+plano_manutencao
+{
+  "_id": "0001,
+  "name": "palceholder",
+  "descricao": "placeholder",
+  "equipment_id": 0001,
+  "frequency": false,
+  "next_maintenance": date,
+  "activities": "placeholder",
+  "status": "desativado"
+},

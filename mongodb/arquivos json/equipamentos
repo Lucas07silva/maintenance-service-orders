@@ -1,0 +1,11 @@
+  "equipamento": {
+    "_id": "EQP001",
+    "name": "Torno Mecânico",
+    "assetCode": "EQ-001",
+    "model": "TM-500",
+    "manufacturer": "Indústria XYZ",
+    "serialNumber": "SN123456",
+    "installationDate": "2024-05-10",
+    "status": "operando",
+    "sectorId": "SET001"
+  },
